@@ -23,10 +23,17 @@ class Solution {
 	 * Space Complexity: O(1) 
      **/
     public int numSubarraysWithSum(int[] A, int S) {
+		// i's form an interval [iLo, iHi], and each of iLo, iHi are increasing with respect to j
+		// the smallest i so that sumLo <= S
+		// the largest i so that sumHi <= S
         int iLo = 0, iHi = 0;
+
+		// the sum of subarray [iLo, j]
+		// the sum of subarray [iHi, j]
         int sumLo = 0, sumHi = 0;
         int ans = 0;
 
+		// For each j, try to count the number of i's that have the subarray [i, j] equal to S
         for (int j = 0; j < A.length; ++j) {
             // While sumLo is too big, iLo++
             sumLo += A[j];
@@ -44,7 +51,6 @@ class Solution {
                 ans += iHi - iLo + 1;
 			}
         }
-
         return ans;
     }
 }
