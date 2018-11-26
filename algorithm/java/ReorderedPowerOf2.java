@@ -1,10 +1,20 @@
+import java.io.*;
+import java.util.*;
+import java.util.Arrays;
+
 class Solution {
     /**
-     *
+     * check whether two numbers have the same digits by comparing the count of their digits.
+     * For example, 338 and 833 have the same digits because they both have exactly two 3's and one 8.
+	 * Time Complexity:  O(log^2N)
+	 * Space Complexity: O(logN) 
      **/
     public boolean reorderedPowerOf2(int N) {
         int[] A = count(N);
         for (int i = 0; i < 31; ++i) {
+            // compare with 1 which shifts i bit to left.
+			// 1 which shifts i bit to left means power of 2
+			System.out.println(Arrays.toString(count(1 << i)));
             if (Arrays.equals(A, count(1 << i))) {
                 return true;
             }
@@ -12,8 +22,11 @@ class Solution {
         return false;
     }
     
-    // Returns the count of digits of N
-    // Eg. N = 218, returns a[8]=1, a[1]=1, a[2]=1
+    /** 
+     * Returns the count of digits of N
+     * Eg. N = 218 or 128, returns a[8]=1, a[1]=1, a[2]=1, int[] ans = {0,1,1,0,0,0,1,0}
+     *
+     **/
     public int[] count(int N) {
         int[] ans = new int[10];
         while (N > 0) {
@@ -55,14 +68,15 @@ public class ReorderedPowerOf2 {
      * Note:
      * 1 <= N <= 10^9
     **/
-    public static void main(String[] args) {
-		BufferReader in = new BufferedReader(new InputStreamReader(System.in));
-		String ling;
+    public static void main(String[] args) throws IOException {
+		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+		String line;
 		while ((line = in.readLine()) != null) {
 			int N = Integer.parseInt(line);
 			boolean ret = new Solution().reorderedPowerOf2(N);
 			String out = booleanToString(ret);
-			System.out.print(out);
+			System.out.print(out + "\n");
+            break;
 		}
     }
 }
