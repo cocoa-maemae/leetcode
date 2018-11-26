@@ -14,7 +14,7 @@ class Solution {
         for (int i = 0; i < 31; ++i) {
             // compare with 1 which shifts i bit to left.
             // 1 which shifts i bit to left means power of 2
-            System.out.println(Arrays.toString(count(1 << i)));
+            // System.out.println(Arrays.toString(count(1 << i)));
             if (Arrays.equals(A, count(1 << i))) {
                 return true;
             }
