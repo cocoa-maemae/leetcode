@@ -5,6 +5,7 @@ import java.util.Arrays;
 class Solution {
     /**
      * First, we observe that for any given sequence that is in descending order, no next larger permutation is possible. For example, no next permutation is possible for the following array:
+     * [9, 5, 4, 3, 1]
      *
      * We need to find the first pair of two successive numbers a[i] and a[i−1], from the right, which satisfy a[i]>a[i−1]. Now, no rearrangements to the right of a[i−1] can create a larger permutation since that subarray consists of numbers in descending order. Thus, we need to rearrange the numbers to the right of a[i−1] including itself.
      *
@@ -19,14 +20,15 @@ class Solution {
      **/
     public void nextPermutation(int[] nums) {
         int i = nums.length - 2;
-        while (i >= 0 && nums[i + 1] <= nums[i]) {
+        while (i >= 0 && nums[i] >= nums[i + 1]) {
             i--;
         }
         if (i >= 0) {
             int j = nums.length - 1;
-            while (j >= 0 && nums[j] <= nums[i]) {
+            while (j >= 0 && nums[i] >= nums[j]) {
                 j--;
             }
+            // if nums is descending order, swap method lost the functionality
             swap(nums, i, j);
         }
         reverse(nums, i + 1);
