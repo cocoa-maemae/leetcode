@@ -1,18 +1,47 @@
 import java.util.*;
 import java.io.*;
+import java.util.Arrays;
 
 class Solution {
     /**
+     * First, we observe that for any given sequence that is in descending order, no next larger permutation is possible. For example, no next permutation is possible for the following array:
+     *
+     * We need to find the first pair of two successive numbers a[i] and a[i−1], from the right, which satisfy a[i]>a[i−1]. Now, no rearrangements to the right of a[i−1] can create a larger permutation since that subarray consists of numbers in descending order. Thus, we need to rearrange the numbers to the right of a[i−1] including itself.
      *
      *
      **/
     public void nextPermutation(int[] nums) {
+        int i = nums.length - 2;
+        while (i >= 0 && nums[i + 1] <= nums[i]) {
+            i--;
+        }
+        if (i >= 0) {
+            int j = nums.length - 1;
+            while (j >= 0 && nums[j] <= nums[i]) {
+                j--;
+            }
+            swap(nums, i, j);
+        }
+        reverse(nums, i + 1);
+    }
 
+    private void reverse(int[] nums, int start) {
+        int i = start, j = nums.length - 1;
+        while (i < j) {
+            swap(nums, i, j);
+            i++;
+            j--;
+        }
+    }
+
+    private void swap(int[] nums, int i, int j) {
+        int t = nums[i];
+        nums[i] = nums[j];
+        nums[j] = t;
     }
 }
 
 public class NextPermutation {
-
     /**
      * Implement next permutation, which rearranges numbers into the lexicographically next greater permutation of numbers.
 	 * If such arrangement is not possible, it must rearrange it as the lowest possible order (ie, sorted in ascending order).
@@ -38,7 +67,7 @@ public class NextPermutation {
 
     private static int[] stringToIntegerArray(String input) {
         input = input.trim();
-        input = input.substring(1, input.length() - 1);
+        //input = input.substring(1, input.length() - 1);
         if (input.length() == 0) {
             return new int[0];
         }
