@@ -76,7 +76,6 @@ public class NextPermutation {
 
     private static int[] stringToIntegerArray(String input) {
         input = input.trim();
-        //input = input.substring(1, input.length() - 1);
         if (input.length() == 0) {
             return new int[0];
         }
