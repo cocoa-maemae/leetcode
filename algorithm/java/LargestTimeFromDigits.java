@@ -3,8 +3,8 @@ import java.io.*;
 import java.util.Arrays;
 
 class Solution {
-    public String largestTimeFromDigits(int[] a) {
-        LinkedList<String> q = addPToQ(a);
+    public String largestTimeFromDigits(int[] A) {
+        LinkedList<String> q = addPtoQ(A);
         String largest = "";
         for (String s : q) {
             s = s.substring(0, 2) + ":" + s.substring(2);
@@ -15,7 +15,7 @@ class Solution {
         return largest;
     }
 
-    private LinkedList<String> addPToQ(int[] a) {
+    private LinkedList<String> addPtoQ(int[] a) {
         LinkedList<String> q = new LinkedList<>();
         q.add("");
         // add permutation of a to q
