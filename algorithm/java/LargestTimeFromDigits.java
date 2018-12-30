@@ -4,16 +4,7 @@ import java.util.Arrays;
 
 class Solution {
     public String largestTimeFromDigits(int[] a) {
-        LinkedList<String> q = new LinkedList<>();
-        q.add("");
-        for (int n : a) {
-            for (int size = q.size(); size > 0; size--) {
-                String s = q.poll();
-                for (int i = 0; i <= s.length(); i++) {
-                    q.add(s.substring(0, i) + n + s.substring(i));
-                }
-            }
-        }
+        LinkedList<String> q = addPToQ(a);
         String largest = "";
         for (String s : q) {
             s = s.substring(0, 2) + ":" + s.substring(2);
@@ -22,6 +13,25 @@ class Solution {
             }
         }
         return largest;
+    }
+
+    private LinkedList<String> addPToQ(int[] a) {
+        LinkedList<String> q = new LinkedList<>();
+        q.add("");
+        // add permutation of a to q
+        for (int n : a) {
+            for (int size = q.size(); size > 0; size--) {
+                String s = q.poll();
+                for (int i = 0; i <= s.length(); i++) {
+                    q.add(permutation(s, n, i));
+                }
+            }
+        }
+        return q;
+    }
+
+    private String permutation(String s, int n, int i) {
+        return s.substring(0, i) + n + s.substring(i);
     }
 }
 
