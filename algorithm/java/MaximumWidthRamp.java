@@ -14,9 +14,7 @@ class Solution {
         Integer[] B = new Integer[N];
         for (int i = 0; i < N; ++i) {
             B[i] = i;
-System.out.println(B[i]);
 		}
-System.out.println("\n");
 
 		/**
 		 * order B[] by asc
@@ -28,6 +26,7 @@ System.out.println("\n");
 		//     }
 		//);
         Arrays.sort(B, (i, j) -> ((Integer) A[i]).compareTo(A[j]));
+
         int ans = 0;
         int m = N;
         for (int i : B) {
