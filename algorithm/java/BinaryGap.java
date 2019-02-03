@@ -58,6 +58,7 @@ public class BinaryGap {
             int ret = new Solution().binaryGap(N);
             String out = String.valueOf(ret);
             System.out.printf(out + "\n");
+            break;
         }
     }
 }
