@@ -3,59 +3,47 @@ import java.util.*;
 
 class Solution {
     /**
-     * In an array A of 0s and 1s, how many non-empty subarrays have sum S?
-     *
-     * Input: A = [1,0,1,0,1], S = 2
-     * Output: 4
-     * Explanation: 
-     * The 4 subarrays are bolded below:
-     * [1,0,1,0,1]
-     * [1,0,1,0,1]
-     * [1,0,1,0,1]
-     * [1,0,1,0,1]
-     *
-     * Note:
-     *    A.length <= 30000
-     *    0 <= S <= A.length
-     *    A[i] is either 0 or 1.
+     * For each j, let's count the number of i with P[j] = P[i] + S. This is analogous to counting the number of subarrays ending in j with sum S.
+	 * It comes down to counting how many P[i] + S we've seen before. We can keep this count on the side to help us find the final answer.
      *
      * Time Complexity: O(N) where N is the length of A.
-     * Space Complexity: O(1) 
+     * Space Complexity: O(N) 
      **/
     public int numSubarraysWithSum(int[] A, int S) {
-        // i's form an interval [iLo, iHi], and each of iLo, iHi are increasing with respect to j
-        // the smallest i so that sumLo <= S
-        // the largest i so that sumHi <= S
-        int iLo = 0, iHi = 0;
-
-        // the sum of subarray [iLo, j]
-        // the sum of subarray [iHi, j]
-        int sumLo = 0, sumHi = 0;
+        int N = A.length;
+        int[] P = new int[N + 1];
+        for (int i = 0; i < N; ++i) {
+            P[i+1] = P[i] + A[i];
+		}
+        Map<Integer, Integer> count = new HashMap<Integer, Integer>();
         int ans = 0;
-
-        // For each j, try to count the number of i's that have the subarray [i, j] equal to S
-        for (int j = 0; j < A.length; ++j) {
-            // While sumLo is too big, iLo++
-            sumLo += A[j];
-            while (iLo < j && sumLo > S) {
-                sumLo -= A[iLo++];
-            }
-
-            // While sumHi is too big, or equal and we can move, iHi++
-            sumHi += A[j];
-            while (iHi < j && (sumHi > S || sumHi == S && A[iHi] == 0)) {
-                sumHi -= A[iHi++];
-            }
-
-            if (sumLo == S) {
-                ans += iHi - iLo + 1;
-            }
+        for (int x : P) {
+            ans += count.getOrDefault(x, 0);
+            count.put(x + S, count.getOrDefault(x + S, 0) + 1);
         }
         return ans;
     }
 }
 
 public class BinarySubarraysWithSum {
+    /**
+     * In an array A of 0s and 1s, how many non-empty subarrays have sum S?
+     *
+     * Input: A = [1,0,1,0,1], S = 2
+     * Output: 4
+     * Explanation: 
+     * The 4 subarrays are below:
+     * [1,0,1,*,*]
+     * [1,0,1,0,*]
+     * [*,0,1,0,1]
+     * [*,*,1,0,1]
+     *
+     * Note:
+     *    A.length <= 30000
+     *    0 <= S <= A.length
+     *    A[i] is either 0 or 1.
+     *
+     **/
     public static void main(String[] args) throws IOException {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         String line;
