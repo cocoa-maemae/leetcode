@@ -19,6 +19,7 @@ class Solution {
         /**
          * order B[] by asc
          **/
+        // old sort logic
         // Arrays.sort(B, new Comparator<Integer>() {
         //     @Override
         //     public int compare(int i, int j) {
