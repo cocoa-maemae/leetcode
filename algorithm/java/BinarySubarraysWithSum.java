@@ -4,9 +4,9 @@ import java.util.*;
 class Solution {
     /**
      * For each j, let's count the number of i with P[j] = P[i] + S. 
-	 * This is analogous to counting the number of subarrays ending in j with sum S.
-	 * It comes down to counting how many P[i] + S we've seen before. 
-	 * We can keep this count on the side to help us find the final answer.
+     * This is analogous to counting the number of subarrays ending in j with sum S.
+     * It comes down to counting how many P[i] + S we've seen before. 
+     * We can keep this count on the side to help us find the final answer.
      *
      * Time Complexity: O(N) where N is the length of A.
      * Space Complexity: O(N) 
@@ -16,7 +16,7 @@ class Solution {
         int[] P = new int[N + 1];
         for (int i = 0; i < N; ++i) {
             P[i + 1] = P[i] + A[i];
-		}
+        }
         Map<Integer, Integer> cnt = new HashMap<Integer, Integer>();
         int ans = 0;
         for (int n : P) {
