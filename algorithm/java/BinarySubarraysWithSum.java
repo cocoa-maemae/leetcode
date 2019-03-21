@@ -3,6 +3,10 @@ import java.util.*;
 
 class Solution {
     /**
+     * Intuition
+     * Let P[i] = A[0] + A[1] + ... + A[i-1]. Then P[j+1] - P[i] = A[i] + A[i+1] + ... + A[j], the sum of the subarray [i, j]
+     * Hence, we are looking for the number of i < j with P[j] - P[i] = S
+     *
      * For each j, let's count the number of i with P[j] = P[i] + S. 
      * This is analogous to counting the number of subarrays ending in j with sum S.
      * It comes down to counting how many P[i] + S we've seen before. 
@@ -16,6 +20,7 @@ class Solution {
         int[] P = new int[N + 1];
         for (int i = 0; i < N; ++i) {
             P[i + 1] = P[i] + A[i];
+			System.out.println(P[i+1]);
         }
         Map<Integer, Integer> cnt = new HashMap<Integer, Integer>();
         int ans = 0;
