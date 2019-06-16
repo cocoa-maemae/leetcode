@@ -21,7 +21,6 @@ import java.io.*;
  * Approach 2: 2D DP
  * It's tricky when we have even number of piles of stones. You may not have this condition in an interview.
  * Follow-up:
- *
  * What if piles.length can be odd?
  * What if we want to know exactly the diffenerce of score?
  * Then we need to solve it with DP.
