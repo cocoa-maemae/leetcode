@@ -2,6 +2,7 @@ import com.eclipsesource.json.JsonArray;
 import java.io.*;
 import java.util.*;
 
+
 /**
  * front-back projection area on xz = sum(max value for every col)
  * right-left projection area on yz = sum(max value for every row)
@@ -15,6 +16,7 @@ class Solution {
             for (int j = 0; j < n; ++j) {
                 x = Math.max(x, grid[i][j]);
                 y = Math.max(y, grid[j][i]);
+                // top-down
                 if (grid[i][j] > 0) ++ans;
             }
             ans += x + y;
