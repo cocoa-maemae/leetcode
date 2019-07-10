@@ -37,6 +37,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
             int ret = new Solution().getLenOfLongestSubstr(line);
             String out = String.valueOf(ret);
             System.out.print(out + "\n");
+            break;
         }
     }
 }
