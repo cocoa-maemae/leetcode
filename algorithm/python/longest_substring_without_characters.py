@@ -3,14 +3,13 @@ import json
 
 class Solution(object):
     def lengthOfLongestSubstring(self, s):
-        map = {}
-        ans = 0
-        first = 0
+        dict = {}
+        ans, d = 0, 0
         for i in range(len(s)):
-            if s[i] in map:
-                first = max(first, map[s[i]] + 1)
-            map[s[i]] = i
-            ans = max(ans, i - first + 1)
+            if s[i] in dict:
+                d = max(d, dict[s[i]] + 1)
+            dict[s[i]] = i
+            ans = max(ans, i - d + 1)
         return ans
 
 def stringToArray(input):

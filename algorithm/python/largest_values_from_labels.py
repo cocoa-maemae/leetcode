@@ -1,6 +1,7 @@
 import json
 import collections
 
+
 class Solution(object):
     def largestValsFromLabels(self, values, labels, num_wanted, use_limit):
         counts = collections.defaultdict(int)
@@ -14,16 +15,20 @@ class Solution(object):
                 num_wanted -= 1
         return ans
 
+
 def stringToIntegerList(input):
     return json.loads(input)
 
+
 def stringToInt(input):
     return int(input)
+
 
 def intToString(input):
     if input is None:
         input = 0
     return str(input)
+
 
 def main():
     import sys
