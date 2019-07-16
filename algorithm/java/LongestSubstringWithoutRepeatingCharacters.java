@@ -9,16 +9,14 @@ class Solution {
      **/
     public int getLenOfLongestSubstr(String s) {
         int ans = 0;
-
-        // sliding window
-        // try to extend the range [i, j]
-        Map<Character, Integer> map = new HashMap<>(); // current index of character
-        for (int j = 0, i = 0; j < s.length(); j++) {
-            if (map.containsKey(s.charAt(j))) {
-                i = Math.max(map.get(s.charAt(j)), i);
+        // d means duplication
+        Map<Character, Integer> cnt = new HashMap<>(); // current index of character
+        for (int i = 0, d = 0; i < s.length(); i++) {
+            if (cnt.containsKey(s.charAt(i))) {
+                d = Math.max(cnt.get(s.charAt(i)), d);
             }
-            ans = Math.max(ans, j - i + 1);
-            map.put(s.charAt(j), j + 1);
+            ans = Math.max(ans, i - d + 1);
+            cnt.put(s.charAt(i), i + 1);
         }
         return ans;
     }
