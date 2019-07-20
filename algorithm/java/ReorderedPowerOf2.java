@@ -15,6 +15,7 @@ class Solution {
             // compare with 1 which shifts i bit to left.
             // 1 which shifts i bit to left means power of 2
             // System.out.println(Arrays.toString(count(1 << i)));
+            // 0~31 means 32 bits
             if (Arrays.equals(A, count(1 << i))) {
                 return true;
             }
@@ -27,7 +28,7 @@ class Solution {
      * Eg. N = 218 or 128, returns a[8]=1, a[1]=1, a[2]=1, int[] ans = {0,1,1,0,0,0,1,0}
      *
      **/
-    public int[] count(int N) {
+    private int[] count(int N) {
         int[] ans = new int[10];
         while (N > 0) {
             ans[N % 10]++;
