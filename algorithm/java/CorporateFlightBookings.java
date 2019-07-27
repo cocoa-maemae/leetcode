@@ -4,22 +4,21 @@ import com.eclipsesource.json.JsonArray;
 
 
 class Solution {
-	/**
+    /**
      * Time Complexity: O(m * (end - start))
      * Space Comlexity: 
-	 **/
+     **/
     public int[] corpFlightBookings(int[][] bookings, int n) {
-        int[] res = new int[n];
-        int m = bookings.length;
-        for (int i = 0; i < m; i++) {
+        int[] ans = new int[n];
+        for (int i = 0; i < bookings.length; i++) {
             int seats = bookings[i][2];
             int start = bookings[i][0];
             int end = bookings[i][1];
             for (int j = start; j <= end; j++) {
-                res[j - 1] += seats;
+                ans[j - 1] += seats;
             }
         }
-        return res;
+        return ans;
     }
 }
 
@@ -81,7 +80,7 @@ public class CorporateFlightBookings {
             int[] ret = new Solution().corpFlightBookings(bookings, n);
             String out = integerArrayToString(ret);
             System.out.print(out + "\n");
-			break;
+            break;
         }
     }
 }
