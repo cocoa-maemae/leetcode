@@ -11,17 +11,18 @@ class Solution {
     }
 
     private void backtrack(
-            List<List<Integer>> list, List<Integer> tmp, int[] cand, int remain, int start) {
+            List<List<Integer>> ans, List<Integer> tmp, int[] cand, int remain, int start) {
 
-        if (remain < 0) return;
-        /** no solution */
-        else if (remain == 0) list.add(new ArrayList<>(tmp));
-        else {
+        if (remain < 0) {
+			return;
+		} else if (remain == 0) {
+			ans.add(new ArrayList<>(tmp));
+        } else {
             for (int i = start; i < cand.length; i++) {
-                if (i > start && cand[i] == cand[i - 1]) continue;
                 /** skip duplicates */
+                if (i > start && cand[i] == cand[i - 1]) continue;
                 tmp.add(cand[i]);
-                backtrack(list, tmp, cand, remain - cand[i], i + 1);
+                backtrack(ans, tmp, cand, remain - cand[i], i + 1);
                 tmp.remove(tmp.size() - 1);
             }
         }
