@@ -23,6 +23,7 @@ class Solution {
                 if (i > start && cand[i] == cand[i - 1]) continue;
                 tmp.add(cand[i]);
                 backtrack(ans, tmp, cand, remain - cand[i], i + 1);
+                // remove the head element
                 tmp.remove(tmp.size() - 1);
             }
         }
