@@ -1,5 +1,18 @@
 class Solution {
+    /**
+     * Time complexity: O(2 * n^2)
+     **/
     public void rotate(int[][] matrix) {
+        /**
+         * 1  2  3             
+         * 4  5  6
+         * 7  8  9
+         *    |
+         * 1  4  7
+         * 2  5  8
+         * 3  6  9
+         *
+         **/
         for (int i = 0; i < matrix.length; i++) {
             for (int j = i; j < matrix[0].length; j++) {
                 int tmp = 0;
@@ -8,6 +21,15 @@ class Solution {
                 matrix[j][i] = tmp;
             }
         }
+        /**
+         * 1  4  7
+         * 2  5  8
+         * 3  6  9
+         *    | 
+         * 7  4  1
+         * 8  5  2
+         * 9  6  3
+         **/
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix.length / 2; j++) {
                 int tmp = 0;
