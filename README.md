@@ -26,4 +26,5 @@ python3 $source.py
 |1014|[Best Sightseeing Pair](https://leetcode.com/problems/best-sightseeing-pair/)|[java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/BestSightseeingPair.java)| Medium |
 |1109|[Corporate Flight Bookings](https://leetcode.com/problems/corporate-flight-bookings/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/CorporateFlightBookings.java)| Medium |
 |1128|[Number of Equivalent Domino Pairs](https://leetcode.com/problems/number-of-equivalent-domino-pairs/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/NumberOfEquivalentDominoPairs.java) [Python](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/python/number_of_equivalent_domino_pairs.py)| Easy |
+|1138| [Alphabet Board Path](https://leetcode.com/problems/alphabet-board-path/) |[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/AlphabetBoardPath.java) [Python](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/python/alphabet_board_path.py) | Medium |
 
