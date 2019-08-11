@@ -3,12 +3,13 @@ import java.util.*;
 
 class Solution {
     public boolean canJump(int[] nums) {
-        int max = 0;
+        // the farthest distance that can be reached from the current index
+        int farth = 0;
         for (int i = 0; i < nums.length; i++) {
-            if (i > max) {
+            if (i > farth) {
                 return false;
             }
-            max = Math.max(nums[i] + i, max);
+            farth = Math.max(nums[i] + i, farth);
         }
         return true;
     }
