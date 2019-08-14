@@ -1,5 +1,9 @@
 class Solution:
     def alphabetBoardPath(self, target):
+        """
+        Time Complexity: O(N)
+        Space Complexity: O(N)
+        """
         m = {c: [i // 5, i % 5] for i, c in enumerate("abcdefghijklmnopqrstuvwxyz")}
         x0, y0 = 0, 0
         res = []

@@ -4,13 +4,19 @@ import java.util.*;
 
 class Solution {
     /**
-     * Count the number of consecutive 1s on the top and on the left. From length of edge l =
-     * min(m,n) to l = 1, check if the 1-bordered square exist.
+     * Count the number of consecutive 1s on the top and on the left. 
+     * From length of edge = min(hor[h,w], ver[h,w]) to edge = 1, check if the 1-bordered square exist.
      */
     public int largest1BorderedSquare(int[][] grid) {
         if (grid.length == 0) return 0;
         int h = grid.length, w = grid[0].length;
         int[][] hor = new int[h][w], ver = new int[h][w];
+
+        /*
+         * E.g. input = [[1,1,1],[1,0,1],[1,1,1]]
+         * hor = [[1,2,3],[1,2],[1,2,3]]
+         * ver = [[1,1,1],[2,2],[3,3,3]]
+         */
         for (int i = 0; i < h; i++) {
             for (int j = 0; j < w; j++) {
                 if (grid[i][j] == 1) {
@@ -30,6 +36,16 @@ class Solution {
             }
         }
         return max * max;
+        /*
+        for (int edge = Math.min(h, w); edge > 0; --edge)
+            for (int i = 0; i < h - edge + 1; ++i)
+                for (int j = 0; j < w - edge + 1; ++j)
+                    if (hor[i + edge - 1][j] >= edge
+                            && hor[i + edge - 1][j + edge - 1] >= edge 
+                            && ver[i][j + edge - 1] >= edge
+                            && ver[i + edge - 1][j + edge - 1] >= edge) return edge * edge;
+        return 0;
+        */
     }
 }
 
