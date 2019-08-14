@@ -1,23 +1,27 @@
+import com.eclipsesource.json.JsonArray;
 import java.io.*;
 import java.util.*;
 
-public class Solution {
+class Solution {
+    /**
+     * Count the number of consecutive 1s on the top and on the left. From length of edge l =
+     * min(m,n) to l = 1, check if the 1-bordered square exist.
+     */
     public int largest1BorderedSquare(int[][] grid) {
         if (grid.length == 0) return 0;
-        int m = grid.length, n = grid[0].length;
-        int hor[][] = new int[m][n];
-        int ver[][] = new int[m][n];
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
+        int h = grid.length, w = grid[0].length;
+        int[][] hor = new int[h][w], ver = new int[h][w];
+        for (int i = 0; i < h; i++) {
+            for (int j = 0; j < w; j++) {
                 if (grid[i][j] == 1) {
-                    hor[i][j] = j == 0 ? 1 : hor[i][j - 1] + 1;
-                    ver[i][j] = i == 0 ? 1 : ver[i - 1][j] + 1;
+                    hor[i][j] = (j == 0) ? 1 : (hor[i][j - 1] + 1);
+                    ver[i][j] = (i == 0) ? 1 : (ver[i - 1][j] + 1);
                 }
             }
         }
         int max = 0;
-        for (int i = m - 1; i >= 0; i--) {
-            for (int j = n - 1; j >= 0; j--) {
+        for (int i = h - 1; i >= 0; i--) {
+            for (int j = w - 1; j >= 0; j--) {
                 int edge = Math.min(hor[i][j], ver[i][j]);
                 while (edge > max) {
                     if (ver[i][j - edge + 1] >= edge && hor[i - edge + 1][j] >= edge) max = edge;
