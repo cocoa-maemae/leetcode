@@ -1,23 +1,33 @@
+import com.eclipsesource.json.JsonArray;
 import java.io.*;
 import java.util.*;
 
-public class Solution {
+class Solution {
+    /**
+     * Count the number of consecutive 1s on the top and on the left. 
+     * From length of edge = min(hor[h,w], ver[h,w]) to edge = 1, check if the 1-bordered square exist.
+     */
     public int largest1BorderedSquare(int[][] grid) {
         if (grid.length == 0) return 0;
-        int m = grid.length, n = grid[0].length;
-        int hor[][] = new int[m][n];
-        int ver[][] = new int[m][n];
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
+        int h = grid.length, w = grid[0].length;
+        int[][] hor = new int[h][w], ver = new int[h][w];
+
+        /*
+         * E.g. input = [[1,1,1],[1,0,1],[1,1,1]]
+         * hor = [[1,2,3],[1,2],[1,2,3]]
+         * ver = [[1,1,1],[2,2],[3,3,3]]
+         */
+        for (int i = 0; i < h; i++) {
+            for (int j = 0; j < w; j++) {
                 if (grid[i][j] == 1) {
-                    hor[i][j] = j == 0 ? 1 : hor[i][j - 1] + 1;
-                    ver[i][j] = i == 0 ? 1 : ver[i - 1][j] + 1;
+                    hor[i][j] = (j == 0) ? 1 : (hor[i][j - 1] + 1);
+                    ver[i][j] = (i == 0) ? 1 : (ver[i - 1][j] + 1);
                 }
             }
         }
         int max = 0;
-        for (int i = m - 1; i >= 0; i--) {
-            for (int j = n - 1; j >= 0; j--) {
+        for (int i = h - 1; i >= 0; i--) {
+            for (int j = w - 1; j >= 0; j--) {
                 int edge = Math.min(hor[i][j], ver[i][j]);
                 while (edge > max) {
                     if (ver[i][j - edge + 1] >= edge && hor[i - edge + 1][j] >= edge) max = edge;
@@ -26,6 +36,16 @@ public class Solution {
             }
         }
         return max * max;
+        /*
+        for (int edge = Math.min(h, w); edge > 0; --edge)
+            for (int i = 0; i < h - edge + 1; ++i)
+                for (int j = 0; j < w - edge + 1; ++j)
+                    if (hor[i + edge - 1][j] >= edge
+                            && hor[i + edge - 1][j + edge - 1] >= edge 
+                            && ver[i][j + edge - 1] >= edge
+                            && ver[i + edge - 1][j + edge - 1] >= edge) return edge * edge;
+        return 0;
+        */
     }
 }
 
