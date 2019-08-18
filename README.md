@@ -31,5 +31,5 @@ python3 $source.py
 |1140| [Stone Game II](https://leetcode.com/problems/stone-game-ii/) | [Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/StoneGame2.java) | Medium |
 |1144| [Decrease Elements To Make Array Zigzag](https://leetcode.com/problems/decrease-elements-to-make-array-zigzag/) | [Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/DecreaseElementsToMakeArrayZigzag.java) | Medium |
 |1154| [Day of the Year](https://leetcode.com/problems/day-of-the-year/) | [Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/DayOfTheYear.java)| Easy |
+|1155| [Number of Dice Rolls With Target Sum](https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/) | [Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/NumberOfDiceRollsWithTargetSum.java) | Medium |
 |1156| [Swap For Longest Repeated Character Substring](https://leetcode.com/problems/swap-for-longest-repeated-character-substring/) | [Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/SwapForLongestRepeatedCharacterSubstring.java) | Medium |
-
