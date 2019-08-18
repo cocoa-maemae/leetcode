@@ -30,4 +30,5 @@ python3 $source.py
 |1139| [Largest 1-Bordered Square](https://leetcode.com/problems/largest-1-bordered-square/) |[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/Largets1BorderedSquare.java)| Medium |
 |1140| [Stone Game II](https://leetcode.com/problems/stone-game-ii/) | [Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/StoneGame2.java) | Medium |
 |1144| [Decrease Elements To Make Array Zigzag](https://leetcode.com/problems/decrease-elements-to-make-array-zigzag/) | [Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/DecreaseElementsToMakeArrayZigzag.java) | Medium |
+|1154| [Day of the Year](https://leetcode.com/problems/day-of-the-year/) | [Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/DayOfTheYear.java)| Easy |
 
