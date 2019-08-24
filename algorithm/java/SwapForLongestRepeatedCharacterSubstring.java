@@ -3,29 +3,27 @@ import java.io.*;
 import java.util.*;
 
 class Solution {
+    /**
+     * At each char, we will see how far right can we go. Obvioulsy, if it is the same char, we can
+     * move forward otherwise we record we saw one diff char by diff++ and proceed. 
+     * cnt < dir[cur-'a'] will ensure we have enough cur occurances to proceed when we saw the different char.
+     **/
     public int maxRepOpt1(String text) {
-        int[] count = new int[26];
-        int[] newCount = new int[26];
-        for (char c : text.toCharArray()) {
-            newCount[c - 'a']++;
-        }
-        int start = 0, maxCount = 0, maxLength = 0;
-        for (int end = 0; end < text.length(); end++) {
-            maxCount = Math.max(maxCount, ++count[text.charAt(end) - 'a']);
-            while (end - start + 1 - maxCount > 1
-                    || end - start + 1 > newCount[text.charAt(start) - 'a']) {
-                count[text.charAt(start) - 'a']--;
-                start++;
-                maxCount = 0;
-                for (int i = 0; i < 26; i++) {
-                    if (maxCount < count[i]) {
-                        maxCount = count[i];
-                    }
-                }
+        int[] dir = new int[26];
+        char[] c = text.toCharArray();
+        for (int i = 0; i < c.length; i++) dir[c[i] - 'a']++;
+        int max = 0;
+        for (int i = 0; i < c.length; i++) {
+            char cur = c[i];
+            int j = i, cnt = 0, diff = 0;
+            while (j < c.length && (cur == c[j] || diff == 0) && cnt < dir[cur - 'a']) {
+                if (cur != c[j]) ++diff;
+                ++cnt;
+                ++j;
             }
-            maxLength = Math.max(maxLength, end - start + 1);
+            max = Math.max(max, cnt);
         }
-        return maxLength;
+        return max;
     }
 }
 
