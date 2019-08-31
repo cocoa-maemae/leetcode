@@ -20,6 +20,7 @@ class TreeNode {
  * }
  */
 class Solution {
+    // key is node.val, value is tree depth
     Map<Integer, Integer> depth;
     Map<Integer, TreeNode> parent;
 
@@ -37,6 +38,7 @@ class Solution {
         if (node != null) {
             depth.put(node.val, (par != null) ? (1 + depth.get(par.val)) : 0);
             parent.put(node.val, par);
+            // continue till node is empty
             dfs(node.left, node);
             dfs(node.right, node);
         }
@@ -86,6 +88,7 @@ public class CousinsInBinaryTree {
             return null;
         }
         String[] parts = input.split(",");
+        // root node value
         String item = parts[0];
         TreeNode root = new TreeNode(Integer.parseInt(item));
         Queue<TreeNode> nodeQueue = new LinkedList<>();
