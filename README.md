@@ -22,6 +22,7 @@ python3 $source.py
 |55|[Jump Game](https://leetcode.com/problems/jump-game/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/JumpGame.java)| Medium |
 |869|[Reordered Power of 2](https://leetcode.com/problems/reordered-power-of-2/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/ReorderedPowerOf2.java)| Medium |
 |989|[Add to Array-Form of Integer](https://leetcode.com/problems/add-to-array-form-of-integer/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/AddToArrayFormOfInteger.java)| Easy |
+|993| [Cousins in Binary Tree](https://leetcode.com/problems/cousins-in-binary-tree/) | [Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/CousinsInBinaryTree.java) | Easy |
 |994|[Rotting Oranges](https://leetcode.com/problems/rotting-oranges/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/RottingOrange.java)| Easy |
 |1002| [Find Common Characters](https://leetcode.com/problems/find-common-characters/) | [Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/FindCommonCharacters.java) | Easy |
 |1014|[Best Sightseeing Pair](https://leetcode.com/problems/best-sightseeing-pair/)|[java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/BestSightseeingPair.java)| Medium |
