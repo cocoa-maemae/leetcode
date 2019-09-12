@@ -35,3 +35,4 @@ python3 $source.py
 |1154| [Day of the Year](https://leetcode.com/problems/day-of-the-year/) | [Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/DayOfTheYear.java)| Easy |
 |1155| [Number of Dice Rolls With Target Sum](https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/) | [Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/NumberOfDiceRollsWithTargetSum.java) | Medium |
 |1156| [Swap For Longest Repeated Character Substring](https://leetcode.com/problems/swap-for-longest-repeated-character-substring/) | [Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/SwapForLongestRepeatedCharacterSubstring.java) | Medium |
+|1184| [Distance Between Bus Stops](https://leetcode.com/problems/distance-between-bus-stops/) | [Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/DistanceBetweenBusStops.java) | Easy |
