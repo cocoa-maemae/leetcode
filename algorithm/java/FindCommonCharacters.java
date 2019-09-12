@@ -15,6 +15,7 @@ class Solution {
             int[] cw = new int[26];
             for (int j = 0; j < A[i].length(); j++) {
                 // A[0].charAt(j) - 'a' means integer diff of alphabet, set 1 as value
+                // 'a' = 1
                 cw[A[i].charAt(j) - 'a']++;
             }
             // Update the common dictionary

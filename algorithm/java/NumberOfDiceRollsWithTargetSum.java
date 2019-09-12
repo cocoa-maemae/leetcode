@@ -2,21 +2,31 @@ import java.util.*;
 import java.io.*;
 
 class Solution {
-    int MOD = 1000000000 + 7;
-    Map<String, Integer> memo = new HashMap<>();
+    int MOD = 1000000007;
 
     public int numRollsToTarget(int d, int f, int target) {
         if (target < d || target > f * d) return 0;
-        int[][] dp = new int[d + 1][target + 1];
-        dp[0][0] = 1;
+        /**
+		 * the 1st index means number of dice
+		 * the 2nd index means sum
+	     **/	
+        int[][] cnt = new int[d + 1][target + 1];
+
+        for (int j = 1; j <= f && j <= target; j++) cnt[1][j] = 1;
+
         for (int i = 1; i <= d; i++) {
-            for (int j = 1; j <= f; j++) {
-                for (int k = i - 1; k <= f * (i - 1) && j + k <= target; k++) {
-                    dp[i][j + k] = (dp[i][j + k] + dp[i - 1][k]) % MOD;
+            for (int j = 1; j <= target; j++) {
+                for (int k = 1; k <= f && k < j; k++) {
+                    /**
+					 * Recursice approach
+					 * E.g.
+					 * Sum(f=2, d=2, s=3) = Sum(2, 1, 2) + Sum(2, 1, 1)
+					 **/
+                    cnt[i][j] = (cnt[i][j] + cnt[i - 1][j - k]) % MOD;
                 }
             }
         }
-        return dp[d][target];
+        return cnt[d][target];
     }
 }
 
