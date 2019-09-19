@@ -15,6 +15,7 @@ class Solution {
                 dq.offer(new StringBuilder());
                 // found a matched brackets pair and reverse the substring between them
             } else if (c == ')') {
+                // extract the last element
                 StringBuilder end = dq.pollLast();
                 dq.peekLast().append(end.reverse());
             } else { // append the char to the last StringBuilder.
