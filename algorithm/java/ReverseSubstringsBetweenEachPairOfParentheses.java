@@ -10,11 +10,11 @@ class Solution {
         for (char c : s.toCharArray()) {
             // dump
             System.out.println(Arrays.toString(dq.toArray()));
-            if (c == '(') { // need a new StringBuilder to save substring in brackets pair
+            // need a new StringBuilder to save substring in brackets pair
+            if (c == '(') {
                 dq.offer(new StringBuilder());
-            } else if (c
-                    == ')') { // found a matched brackets pair and reverse the substring between
-                // them.
+                // found a matched brackets pair and reverse the substring between them
+            } else if (c == ')') {
                 StringBuilder end = dq.pollLast();
                 dq.peekLast().append(end.reverse());
             } else { // append the char to the last StringBuilder.
@@ -38,7 +38,7 @@ public class ReverseSubstringsBetweenEachPairOfParentheses {
             String ret = new Solution().reverseParentheses(s);
             String out = (ret);
             System.out.print(out + "\n");
-			break;
+            break;
         }
     }
 }
