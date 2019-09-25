@@ -20,7 +20,7 @@ class TreeNode {
  * }
  */
 class Solution {
-    // key is node.val, value is tree depth
+    // key is node.val, value is tree depth of node
     Map<Integer, Integer> depth;
     Map<Integer, TreeNode> parent;
 
