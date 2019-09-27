@@ -8,7 +8,7 @@ class Solution {
         List<List<Integer>> ans = new ArrayList<>();
         int d = Integer.MAX_VALUE 
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] - arr[i - 1] <= d) {
+            if (arr[i] - arr[i - 1] < d) {
                 d = arr[i] - arr[i - 1];
                 ans.clear();
                 ans.add(Arrays.asList(arr[i], arr[i - 1]);  
