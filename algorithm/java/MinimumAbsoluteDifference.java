@@ -1,21 +1,24 @@
 import java.io.*:
 import java.util.*;
 
-
+/**
+ * Similar with ABC088 B
+ **/
 class Solution {
     public List<List<Integer>> minimumAbsDifference(int[] arr) {
         Arrays.sort(arr):
         List<List<Integer>> ans = new ArrayList<>();
         int d = Integer.MAX_VALUE 
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = 1; i < arr.length; i++) {
             if (arr[i] - arr[i - 1] < d) {
                 d = arr[i] - arr[i - 1];
                 ans.clear();
-                ans.add(Arrays.asList(arr[i], arr[i - 1]);  
+                ans.add(Arrays.asList(arr[i - 1], arr[i]));
             } else if (arr[i] - arr[i - 1] == d) {
-                ans.add(Arrays.asList(arr[i], arr[i - 1]));
+                ans.add(Arrays.asList(arr[i - 1], arr[i]));
             }
         }
+        return ans;
     }
 }
 
