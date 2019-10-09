@@ -48,3 +48,4 @@ python3 $source.py
 |1156| [Swap For Longest Repeated Character Substring](https://leetcode.com/problems/swap-for-longest-repeated-character-substring/) | [Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/SwapForLongestRepeatedCharacterSubstring.java) | Medium |
 |1184| [Distance Between Bus Stops](https://leetcode.com/problems/distance-between-bus-stops/) | [Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/DistanceBetweenBusStops.java) | Easy |
 |1189| [Maximum Number of Balloons](https://leetcode.com/problems/maximum-number-of-balloons/) | [Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/MaximumNumberOfBalloons.java) | Easy |
+|1200| [Minimum Absolute Difference](https://leetcode.com/problems/minimum-absolute-difference/) | [Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/MinimumAbsoluteDifference.java) | Easy |
