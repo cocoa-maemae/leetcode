@@ -23,7 +23,7 @@ python3 $source.py
 |869|[Reordered Power of 2](https://leetcode.com/problems/reordered-power-of-2/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/ReorderedPowerOf2.java)| Medium |
 |868|[Binary Gap](https://leetcode.com/problems/binary-gap/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/BinaryGap.java)| Easy |
 |883|[Projection Area of 3D Shapes](https://leetcode.com/problems/projection-area-of-3d-shapes/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/ProjectionAreaOf3DShapes.java)| Easy |
-|884||[Uncommon Words from Two Sentences](https://leetcode.com/problems/uncommon-words-from-two-sentences/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/UncommonWordsFromTwoSentences.java)| Easy |
+|884|[Uncommon Words from Two Sentences](https://leetcode.com/problems/uncommon-words-from-two-sentences/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/UncommonWordsFromTwoSentences.java)| Easy |
 |920|[Unique Email Addresses](https://leetcode.com/problems/unique-email-addresses/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/UniqueEmailAddresses.java)| Easy |
 |949|[Largest Time for Given Digits](https://leetcode.com/problems/largest-time-for-given-digits/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/LargestTimeFromDigits.java)| Easy |
 |953|[Verifying an Alien Dictionary](https://leetcode.com/problems/verifying-an-alien-dictionary/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/VerifyingAnAlienDirectory.java)| Easy |
