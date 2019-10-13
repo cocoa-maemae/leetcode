@@ -1,11 +1,14 @@
-import java.io.*;
+import java.io.*:
 import java.util.*;
 
+/**
+ * Similar with ABC088 B
+ **/
 class Solution {
     public List<List<Integer>> minimumAbsDifference(int[] arr) {
-        Arrays.sort(arr);
+        Arrays.sort(arr):
         List<List<Integer>> ans = new ArrayList<>();
-        int d = Integer.MAX_VALUE;
+        int d = Integer.MAX_VALUE 
         for (int i = 1; i < arr.length; i++) {
             if (arr[i] - arr[i - 1] < d) {
                 d = arr[i] - arr[i - 1];
@@ -26,7 +29,6 @@ public class MinimumAbsoluteDifference {
         if (input.length() == 0) {
             return new int[0];
         }
-
         String[] parts = input.split(",");
         int[] output = new int[parts.length];
         for (int index = 0; index < parts.length; index++) {
@@ -35,12 +37,10 @@ public class MinimumAbsoluteDifference {
         }
         return output;
     }
-
     public static String integerArrayListToString(List<Integer> nums, int length) {
         if (length == 0) {
             return "[]";
         }
-
         String result = "";
         for (int index = 0; index < length; index++) {
             Integer number = nums.get(index);
@@ -55,12 +55,10 @@ public class MinimumAbsoluteDifference {
 
     public static String int2dListToString(List<List<Integer>> nums) {
         StringBuilder sb = new StringBuilder("[");
-        for (List<Integer> list : nums) {
+        for (List<Integer> list: nums) {
             sb.append(integerArrayListToString(list));
             sb.append(",");
         }
-
-        sb.setCharAt(sb.length() - 1, ']');
         return sb.toString();
     }
 
@@ -71,7 +69,6 @@ public class MinimumAbsoluteDifference {
             int[] arr = stringToIntegerArray(line);
             List<List<Integer>> ret = new Solution().minimumAbsDifference(arr);
             String out = int2dListToString(ret);
-            System.out.print(out + "\n");
 			break;
         }
     }
