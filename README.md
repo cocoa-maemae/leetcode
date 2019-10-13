@@ -15,7 +15,7 @@ python3 $source.py
 # Algorithm
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
-|2|[Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/AddTwoNumber.java)| Easy |
+|2|[Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/AddTwoNumber.java)| Medium |
 |3|[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/LongestSubstringWithoutRepeatingCharacters.java) [Python](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/python/longest_substring_without_characters.py)|Medium|
 |31|[Next Permutation](https://leetcode.com/problems/next-permutation/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/NextPermutation.java) [Python](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/python/next_permutation.py)| Medium |
 |40|[Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/CombinationSum2.java)| Medium |
