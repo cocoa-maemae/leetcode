@@ -29,7 +29,6 @@ public class MinimumAbsoluteDifference {
         if (input.length() == 0) {
             return new int[0];
         }
-                                                  
         String[] parts = input.split(",");
         int[] output = new int[parts.length];
         for (int index = 0; index < parts.length; index++) {
@@ -38,7 +37,6 @@ public class MinimumAbsoluteDifference {
         }
         return output;
     }
-                                                                                                                 
     public static String integerArrayListToString(List<Integer> nums, int length) {
         if (length == 0) {
             return "[]";
@@ -61,7 +59,6 @@ public class MinimumAbsoluteDifference {
             sb.append(integerArrayListToString(list));
             sb.append(",");
         }
-        sb.setCharAt(sb.length() - 1, ']');
         return sb.toString();
     }
 
@@ -72,8 +69,7 @@ public class MinimumAbsoluteDifference {
             int[] arr = stringToIntegerArray(line);
             List<List<Integer>> ret = new Solution().minimumAbsDifference(arr);
             String out = int2dListToString(ret);
-            System.out.print(out + "\n");
-            break;
+			break;
         }
     }
 }
