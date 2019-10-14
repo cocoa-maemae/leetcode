@@ -8,15 +8,16 @@ class Solution {
      * Space complexity (Table): O(m). mmm is the size of the charset.
      **/
     public int getLenOfLongestSubstr(String s) {
+        // p means position(index)
+        Map<Character, Integer> p = new HashMap<>(); // current index of character
         int ans = 0;
-        // d means duplication
-        Map<Character, Integer> cnt = new HashMap<>(); // current index of character
         for (int i = 0, d = 0; i < s.length(); i++) {
-            if (cnt.containsKey(s.charAt(i))) {
-                d = Math.max(cnt.get(s.charAt(i)), d);
+            if (p.containsKey(s.charAt(i))) {
+                // d means duplication index
+                d = Math.max(p.get(s.charAt(i)), d);
             }
             ans = Math.max(ans, i - d + 1);
-            cnt.put(s.charAt(i), i + 1);
+            p.put(s.charAt(i), i + 1);
         }
         return ans;
     }
