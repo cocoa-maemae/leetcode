@@ -13,14 +13,14 @@ class Solution {
             start = destination;
             destination = tmp;
         }
-        int res = 0, total = 0;
+        int rest = 0, total = 0;
         for (int i = 0; i < distance.length; i++) {
-            if (i >= start && i < destination) {
-                res += distance[i];
+            if (start <= i && destination > i) {
+                rest += distance[i];
             }
             total += distance[i];
         }
-        return Math.min(res, total - res);
+        return Math.min(rest, total - rest);
     }
 }
 

@@ -17,11 +17,13 @@ class Solution {
             char cur = c[i];
             int j = i, cnt = 0, diff = 0;
             while (j < c.length && (cur == c[j] || diff == 0) && cnt < dir[cur - 'a']) {
+                System.out.println(cur);
                 if (cur != c[j]) ++diff;
                 ++cnt;
                 ++j;
             }
             max = Math.max(max, cnt);
+            System.out.println(max);
         }
         return max;
     }
