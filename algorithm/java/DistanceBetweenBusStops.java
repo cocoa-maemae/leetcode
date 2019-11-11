@@ -3,9 +3,9 @@ import java.util.*;
 
 class Solution {
     /**
-	 * Make sure start comes before end
-	 * Caculate the sum of target interval as well as the total sum
-	 * The result will be the min of target interval sum and the remaining interval sum.
+     * Make sure start comes before end
+     * Caculate the sum of target interval as well as the total sum
+     * The result will be the min of target interval sum and the remaining interval sum.
      **/
     public int distanceBetweenBusStops(int[] distance, int start, int destination) {
         if (start > destination) {
@@ -13,14 +13,14 @@ class Solution {
             start = destination;
             destination = tmp;
         }
-        int res = 0, total = 0;
+        int rest = 0, total = 0;
         for (int i = 0; i < distance.length; i++) {
-            if (i >= start && i < destination) {
-                res += distance[i];
+            if (start <= i && destination > i) {
+                rest += distance[i];
             }
             total += distance[i];
         }
-        return Math.min(res, total - res);
+        return Math.min(rest, total - rest);
     }
 }
 
