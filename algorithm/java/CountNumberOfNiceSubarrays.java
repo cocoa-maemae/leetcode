@@ -3,23 +3,24 @@ import java.util.*;
 
 class Solution {
     public int numberOfSubarrays(int[] nums, int k) {
-        //By subtracting atMost(A, k-1), effectively removing all subarrays with count of odd numbers greater than 0 and less than or equal to k-1
-        return atMost(nums, k) - atMost(nums, k - 1);
+        //By subtracting countSubarrays(A, k-1), effectively removing all subarrays with count of odd numbers greater than 0 and less than or equal to k-1
+        return countSubarrays(nums, k) - countSubarrays(nums, k - 1);
     }
 
     // the number of subarrays where count of odd numbers is greater than 0 and less than equal to k. 
-    private int atMost(int[] A, int k) {
-        int res = 0, i = 0;
+    private int countSubarrays(int[] A, int k) {
+        int cnt = 0, i = 0;
         for (int j = 0; j < A.length; j++) {
             // if A[j] is not odd, A[j] % 2 = 0
             // if A[j] is odd, A[j] % 2 = 1
             k -= A[j] % 2;
             while (k < 0) {
+                // k is sum of odd numbers. If k is minus, plus from the element of the head.
                 k += A[i++] % 2;
             }
-            res += j - i + 1;
+            cnt += j - i + 1;
         }
-        return res;
+        return cnt;
     }
 }
 
