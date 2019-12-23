@@ -13,6 +13,11 @@ class Solution {
         int lastOffset = -1, maxGap = 0;
         for (int curOffset = 0; curOffset < MAX_INT_BIT; ++curOffset) {
             // n >> curOffset means a remainder when n is divided by 2
+            /**
+             * E.g.
+             * n = 22(=10110)
+             * n>>0=22, n>>1=1011(=11), n>>2=101(=5), n>>3=10(=2), n>>4=1(=1)
+             **/
             // Using (n >> curOffset) & 1, specify the offset of 1 from right.
             if (((n >> curOffset) & 1) != 0) {
                 if (lastOffset >= 0) {
