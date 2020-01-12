@@ -16,6 +16,7 @@ class Solution {
                 // d means duplication character index in s
                 d = Math.max(p.get(s.charAt(i)), d);
             }
+            // update character's index
             // i + 1 - d means the s length of the current index - d
             ans = Math.max(ans, i + 1 - d);
             p.put(s.charAt(i), i + 1);
