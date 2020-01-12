@@ -16,7 +16,10 @@ class Solution {
                 // d means duplication index
                 d = Math.max(p.get(s.charAt(i)), d);
             }
+            // i - d + 1 meanas ,,,
+            System.out.println(i - d + 1);
             ans = Math.max(ans, i - d + 1);
+            // update character's index
             p.put(s.charAt(i), i + 1);
         }
         return ans;
