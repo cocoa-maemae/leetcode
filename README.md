@@ -23,6 +23,7 @@ python3 $source.py
 |48|[Rotate Image](https://leetcode.com/problems/rotate-image/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/RotateImage.java)| Medium |
 |54|[Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/SpiralMatrix.java)| Medium |
 |55|[Jump Game](https://leetcode.com/problems/jump-game/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/JumpGame.java)| Medium |
+|141|[Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/LinkedListCycle.java)|Easy|
 |869|[Reordered Power of 2](https://leetcode.com/problems/reordered-power-of-2/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/ReorderedPowerOf2.java)| Medium |
 |868|[Binary Gap](https://leetcode.com/problems/binary-gap/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/BinaryGap.java)| Easy |
 |877|[Stone Game](https://leetcode.com/problems/stone-game/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/StoneGame.java)| Medium |
