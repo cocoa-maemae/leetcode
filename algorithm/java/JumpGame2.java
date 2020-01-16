@@ -4,17 +4,20 @@ import java.util.*;
 
 class Solution {
     public int jump(int[] nums) {
-        int steps = 0;
-        int currentMax = 0;
+        int ans = 0;
+        int curMax = 0;
         int nextMax = nums[0];
         for (int i = 0; i < nums.length; i++) {
-            if (i > currentMax) {
-                steps++;
-                currentMax = nextMax;
+            // if nums=[2,3,1,1,4], curMax=0,0,2,2,4
+            if (i > curMax) {
+                // if nums=[2,3,1,1,4], 2 times pass when i=1,3
+                ans++;
+                curMax = nextMax;
             }
+            // if nums=[2,3,1,1,4], nextMax=2,4,4,4,8
             nextMax = Math.max(nextMax, i + nums[i]);
         }
-        return steps;
+        return ans;
     }
 }
 
