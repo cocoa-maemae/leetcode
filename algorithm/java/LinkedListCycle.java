@@ -38,6 +38,7 @@ class Solution {
                 return false;
             }
             slow = slow.next;
+            // proceed 2 next
             fast = fast.next.next;
         }
         return true;
