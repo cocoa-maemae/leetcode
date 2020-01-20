@@ -14,8 +14,8 @@ class Solution {
         int ans = 0, curEnd = 0, curFarthest = 0;
         for (int i = 0; i < nums.length - 1; i++) {
 			// If can't reach the last index,
-            // Not need to check i < curFarthest because Note.
-            if (i > curFarthest) return -1;
+            // Not need to check the limit because read Note.
+            // if (i > curFarthest) return -1;
 
             // if nums=[2,3,1,1,4], curFarthest=0,2,4,4
             curFarthest = Math.max(curFarthest, i + nums[i]);
