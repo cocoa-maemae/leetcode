@@ -23,17 +23,19 @@ class Solution {
                 // If a=2,b=6,c=3, then equal=3 and equal & mask is 1,2,0,0.....
                 /**
                  * For ith bit of (a|b)^c, use 1 << i as mask to do & operation to check if the bit is 0; if not, ith bits of a|b and c are not same and we need at least 1 flip. There are 3 cases.
-				 * i) the ith bit of a|b less than that of c; then ith bit of a|b must be 0, we only need to flip the ith bit of either a or b
-				 * ii) the ith bit of a|b bigger than that of c; then ith bit of a|b must be 1, but if only one of a or b's ith bit is 1, we only need to flip one of them
+				 * i) the ith bit of a | b less than that of c; then ith bit of a|b must be 0, we only need to flip the ith bit of either a or b
+				 * ii) the ith bit of a | b bigger than that of c; then ith bit of a|b must be 1, but if only one of a or b's ith bit is 1, we only need to flip one of them
 				 * iii) Other case, we need to flip both set bit of a and b, hence need 2 flips.
 				 * In short, if ith bits of a|b and c are not same, then only if ith bits of a and b are both 1 and that of c is 0, we need 2 flips; otherwise only 1 flip needed.
                  **/
                 // ith bits of a and b are both 1 and that of c is 0?
+				ans += (ab & mask) < (c & mask) || (a & mask) != (b & mask) ? 1 : 2;
 
+				// Instead of the above, below is OK.
 				// If a=2(10),b=6(110),c=5(101)
                 // 10&01=0 == 110&001=0 && 101&001=1 -> +1
                 // 10&10=10 == 110&010=10 && 101&010=0 -> +2			
-                ans += (a & mask) == (b & mask) && (c & mask) == 0 ? 2 : 1;
+                //ans += (a & mask) == (b & mask) && (c & mask) == 0 ? 2 : 1;
         }
         return ans;
     }
