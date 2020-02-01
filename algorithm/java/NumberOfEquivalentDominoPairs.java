@@ -4,13 +4,20 @@ import com.eclipsesource.json.JsonArray;
 
 class Solution {
     public int numEquivDominoPairs(int[][] dominoes) {
-        Map<Integer, Integer> count = new HashMap<>();
+        Map<Integer, Integer> cnt = new HashMap<>();
         int ans = 0;
         for (int[] d : dominoes) {
+            /**
+             * If dominoes = {{1,2},{2,1},{3,4},{5,6}}
+             * d[0]=1,d[1]=2,k=1*10+2
+             * d[0]=2,d[1]=1,k=1*10+2
+             * d[0]=3,d[1]=4,k=3*10+4
+             * d[0]=5,d[1]=6,k=5*10+6
+             **/
             int k = Math.min(d[0], d[1]) * 10 + Math.max(d[0], d[1]);
-            count.put(k, count.getOrDefault(k, 0) + 1);
+            cnt.put(k, cnt.getOrDefault(k, 0) + 1);
         }
-        for (int v : count.values()) {
+        for (int v : cnt.values()) {
             ans += v * (v - 1) / 2;
         }
         return ans;
