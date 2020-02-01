@@ -17,6 +17,7 @@ class Solution {
             int k = Math.min(d[0], d[1]) * 10 + Math.max(d[0], d[1]);
             cnt.put(k, cnt.getOrDefault(k, 0) + 1);
         }
+        // calculate nC2
         for (int v : cnt.values()) {
             ans += v * (v - 1) / 2;
         }
