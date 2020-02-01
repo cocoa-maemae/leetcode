@@ -12,13 +12,21 @@ class Solution {
             System.out.println(Arrays.toString(dq.toArray()));
             // need a new StringBuilder to save substring in brackets pair
             if (c == '(') {
+                // refer the last and push StringBuilder()
                 dq.offer(new StringBuilder());
                 // found a matched brackets pair and reverse the substring between them
             } else if (c == ')') {
-                // extract the last element
+                // pull the last element
                 StringBuilder end = dq.pollLast();
+                // refer the end of the first element and append the reversed 
                 dq.peekLast().append(end.reverse());
-            } else { // append the char to the last StringBuilder.
+            } else { 
+                // append the char to the end of the first element.
+                /**
+                 * E.g.
+                 * input=(abcd)
+                 * dq.peekLast().toString() = a, ab, abc, abcd
+                 **/
                 dq.peekLast().append(c);
             }
         }
