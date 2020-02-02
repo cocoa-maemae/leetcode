@@ -24,6 +24,7 @@ python3 $source.py
 |54|[Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/SpiralMatrix.java)| Medium |
 |55|[Jump Game](https://leetcode.com/problems/jump-game/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/JumpGame.java)| Medium |
 |141|[Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/LinkedListCycle.java)|Easy|
+|142|[Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/LinkedListCycle2.java)|Medium|
 |869|[Reordered Power of 2](https://leetcode.com/problems/reordered-power-of-2/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/ReorderedPowerOf2.java)| Medium |
 |868|[Binary Gap](https://leetcode.com/problems/binary-gap/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/BinaryGap.java)| Easy |
 |877|[Stone Game](https://leetcode.com/problems/stone-game/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/StoneGame.java)| Medium |
@@ -66,3 +67,4 @@ python3 $source.py
 |1306|[Jump Game III](https://leetcode.com/problems/jump-game-iii/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/JumpGame3.java)|Medium|
 |1309|[Decrypt String from Alphabet to Integer Mapping](https://leetcode.com/problems/decrypt-string-from-alphabet-to-integer-mapping/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/DecryptStringFromAlphabetToIntegerMapping.java)|Easy|
 |1318|[Minimum Flips to Make a OR b Equal to c](https://leetcode.com/problems/minimum-flips-to-make-a-or-b-equal-to-c/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/MinimumFlipsToMakeaORbEqualToc.java)|Medium|
+|1324|[Print Words Vertically](https://leetcode.com/problems/print-words-vertically/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/PrintWordsVertically.java)|Medium|
