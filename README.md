@@ -68,3 +68,4 @@ python3 $source.py
 |1309|[Decrypt String from Alphabet to Integer Mapping](https://leetcode.com/problems/decrypt-string-from-alphabet-to-integer-mapping/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/DecryptStringFromAlphabetToIntegerMapping.java)|Easy|
 |1318|[Minimum Flips to Make a OR b Equal to c](https://leetcode.com/problems/minimum-flips-to-make-a-or-b-equal-to-c/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/MinimumFlipsToMakeaORbEqualToc.java)|Medium|
 |1324|[Print Words Vertically](https://leetcode.com/problems/print-words-vertically/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/PrintWordsVertically.java)|Medium|
+|1332|[Remove Palindromic Subsequences](https://leetcode.com/problems/remove-palindromic-subsequences/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/RemovePalindromicSubsequences.java)|Easy|
