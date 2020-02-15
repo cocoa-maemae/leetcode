@@ -69,3 +69,4 @@ python3 $source.py
 |1318|[Minimum Flips to Make a OR b Equal to c](https://leetcode.com/problems/minimum-flips-to-make-a-or-b-equal-to-c/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/MinimumFlipsToMakeaORbEqualToc.java)|Medium|
 |1324|[Print Words Vertically](https://leetcode.com/problems/print-words-vertically/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/PrintWordsVertically.java)|Medium|
 |1332|[Remove Palindromic Subsequences](https://leetcode.com/problems/remove-palindromic-subsequences/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/RemovePalindromicSubsequences.java)|Easy|
+|1347|[Minimum Number of Steps to Make Two Strings Anagram](https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/MinimumNumberOfStepsToMakeTwoStringsAnagram.java)|Medium|
