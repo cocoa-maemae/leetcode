@@ -11,15 +11,15 @@ class Solution {
         // p means character position index in s
         Map<Character, Integer> p = new HashMap<>(); // current index of character
         int ans = 0;
-        for (int i = 0, right_i = 0; i < s.length(); i++) {
-            // update right_i
+        for (int i = 0, di = 0; i < s.length(); i++) {
+            // update duplicate char index
             if (p.containsKey(s.charAt(i))) {
                 /**
                  * If s=abcabcab
-                 * i      =0,1,2,3,4,5,6,7
-                 * right_i=0,0,0,1,2,3,4,5
+                 * i =0,1,2,3,4,5,6,7
+                 * di=0,0,0,1,2,3,4,5
                  **/
-                right_i = Math.max(p.get(s.charAt(i)), right_i);
+                di = Math.max(p.get(s.charAt(i)), di);
             }
             // save character and position
             p.put(s.charAt(i), i + 1);
@@ -28,8 +28,8 @@ class Solution {
              * i  =0,1,2,3,4,5,6,7
              * ans=1,2,3,3,3,3,3,3
              **/
-            // i - right_i + 1 means the s length of the current index - right_i
-            ans = Math.max(ans, i - right_i + 1);
+            // i - di + 1 means the s length of the current index - right_i
+            ans = Math.max(ans, i - di + 1);
         }
         return ans;
     }
