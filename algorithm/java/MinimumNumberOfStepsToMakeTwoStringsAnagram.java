@@ -5,8 +5,7 @@ import com.eclipsesource.json.JsonArray;
 class Solution {
     public int minSteps(String s, String t) {
         int[] cnt = new int[26];
-        int len = s.length();
-        for (int i = 0; i < len; ++i) {
+        for (int i = 0; i < s.length(); ++i) {
             // count the occurrences of chars in s.
             ++cnt[s.charAt(i) - 'a'];
             // compute the difference between s and t.
