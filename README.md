@@ -45,6 +45,7 @@ python3 $source.py
 |1002| [Find Common Characters](https://leetcode.com/problems/find-common-characters/) | [Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/FindCommonCharacters.java) | Easy |
 |1014|[Best Sightseeing Pair](https://leetcode.com/problems/best-sightseeing-pair/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/BestSightseeingPair.java)| Medium |
 |1021|[Remove Outermost Parentheses](https://leetcode.com/problems/remove-outermost-parentheses/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/RemoveOutermostParentheses.java)| Easy |
+|1029|[Two City Scheduling](https://leetcode.com/problems/two-city-scheduling/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/TwoCityScheduling.java)|Easy|
 |1037|[Valid Boomerang](https://leetcode.com/problems/valid-boomerang/)|[]()| Easy |
 |1089|[Duplicate Zeros](https://leetcode.com/problems/duplicate-zeros/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/DuplicateZeros.java)| Easy |
 |1090|[Largest Values From Labels](https://leetcode.com/problems/largest-values-from-labels/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/LargestValuesFromLabels.java)| Medium |
