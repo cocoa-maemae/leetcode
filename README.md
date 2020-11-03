@@ -74,8 +74,8 @@ python3 $source.py
 |1374|[Generate a String With Characters That Have Odd Counts](https://leetcode.com/problems/generate-a-string-with-characters-that-have-odd-counts/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/GenerateAStringWithCharactersThatHaveOddCounts.java)|Easy|
 |1380|[Lucky Numbers in a Matrix](https://leetcode.com/problems/lucky-numbers-in-a-matrix/)|[Java](https://github.com/cocoa-maemae/leetcode/blob/master/algorithm/java/LuckyNumbersInAMatrix.java)|Easy|
 
-# Algorithm
+# Database
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
 |175|[Combine Two Tables](https://leetcode.com/problems/combine-two-tables/)|[MySQL](https://github.com/cocoa-maemae/leetcode/blob/master/database/mysql/CombineTwoTables.sql)|Easy|
-|||||
+|176|[Second Highest Salary](https://leetcode.com/problems/second-highest-salary/)|[MySQL](https://github.com/cocoa-maemae/leetcode/blob/master/database/mysql/SecondHighestSalary.sql)|Easy|
