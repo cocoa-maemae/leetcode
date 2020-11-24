@@ -79,3 +79,4 @@ python3 $source.py
 |---| ----- | -------- | ---------- |
 |175|[Combine Two Tables](https://leetcode.com/problems/combine-two-tables/)|[MySQL](https://github.com/cocoa-maemae/leetcode/blob/master/database/mysql/CombineTwoTables.sql)|Easy|
 |176|[Second Highest Salary](https://leetcode.com/problems/second-highest-salary/)|[MySQL](https://github.com/cocoa-maemae/leetcode/blob/master/database/mysql/SecondHighestSalary.sql)|Easy|
+|177|[Nth Highest Salary](https://leetcode.com/problems/nth-highest-salary/)|[MySQL](https://github.com/cocoa-maemae/leetcode/blob/master/database/mysql/NthHighestSalary.sql)|Medium|
