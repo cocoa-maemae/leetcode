@@ -46,7 +46,7 @@ public class AddTwoNumber {
     }
 
     private static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        ListNode head = new ListNode(0);
+        ListNode head = new ListNode();
         ListNode cur = head;
         int s = 0;
         while (l1 != null || l2 != null || s >= 10) {
