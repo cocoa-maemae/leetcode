@@ -81,3 +81,5 @@ python3 $source.py
 |176|[Second Highest Salary](https://leetcode.com/problems/second-highest-salary/)|[MySQL](https://github.com/cocoa-maemae/leetcode/blob/master/database/mysql/SecondHighestSalary.sql)|Easy|
 |177|[Nth Highest Salary](https://leetcode.com/problems/nth-highest-salary/)|[MySQL](https://github.com/cocoa-maemae/leetcode/blob/master/database/mysql/NthHighestSalary.sql)|Medium|
 |178|[Rank Scores](https://leetcode.com/problems/rank-scores/)|[MySQL](https://github.com/cocoa-maemae/leetcode/blob/master/database/mysql/RankScores.sql)|Medium|
+|180|[Consecutive Numbers](https://leetcode.com/problems/consecutive-numbers/)|[MySQL](https://github.com/cocoa-maemae/leetcode/blob/master/database/mysql/ConsecutiveNumbers.sql)|Medium|
+|181|[Employees Earning More Than Their Managers](https://leetcode.com/problems/employees-earning-more-than-their-managers/)|[MySQL](https://github.com/cocoa-maemae/leetcode/blob/master/database/mysql/EmployeesEarningMoreThanTheirManagers.sql)|Easy|
